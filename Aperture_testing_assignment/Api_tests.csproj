@@ -28,8 +28,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Ui_tests\" />
-  </ItemGroup>
-
 </Project>
