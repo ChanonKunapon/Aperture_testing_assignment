@@ -62,14 +62,16 @@ PART 1 (API TEST)
 
 
 PART 2 (UI TEST)
+
 Overview
+
 This project automates UI tests for the "https://www.saucedemo.com/" website using Selenium WebDriver, NUnit, and C#. The tests verify various user flows such as login, product addition to the cart, checkout, and logout. The tests are structured using Page Object Model (POM) for better maintainability.
 
 Features
-Login Tests: Valid and invalid login scenarios with different user types.
-Checkout Flow: Tests for adding products to the cart and completing the checkout process.
-Negative Test Cases: Invalid credentials and empty field validations.
-Logging: All test activities are logged into a dynamically created log file for each test run.
+  Login Tests: Valid and invalid login scenarios with different user types.
+  Checkout Flow: Tests for adding products to the cart and completing the checkout process.
+  Negative Test Cases: Invalid credentials and empty field validations.
+  Logging: All test activities are logged into a dynamically created log file for each test run.
 
 Project Structure
 
@@ -78,18 +80,18 @@ Project Structure
         common.cs: Contains reusable methods and helpers used across the test pages.
         Logger.cs: Custom logger for logging test activities and errors to a file with a dynamic name for each run.
 
-tests/ Directory
-Tests.cs: Contains the actual test cases and test suites using NUnit attributes.
+  tests/ Directory
+  Tests.cs: Contains the actual test cases and test suites using NUnit attributes.
 
 Prerequisites
-To run this project, ensure you have the following installed:
+  To run this project, ensure you have the following installed:
 
-.NET SDK (version 5.0 or later)
-Selenium WebDriver
-NUnit for test framework
-ChromeDriver for Chrome browser automation
+ - .NET SDK (version 5.0 or later)
+ - Selenium WebDriver
+ - NUnit for test framework
+ - ChromeDriver for Chrome browser automation
 
 Running the Tests
-1) Run Tests Locally: Run all tests using the following command: dotnet test
-2) Run Tests Execution: dotnet test
-3) Log location store in ..\ui_test\bin\Debug\net6.0\result_ui_test_log
+  1) Run Tests Locally: Run all tests using the following command: dotnet test
+  2) Run Tests Execution: dotnet test
+  3) Log location store in ..\ui_test\bin\Debug\net6.0\result_ui_test_log
