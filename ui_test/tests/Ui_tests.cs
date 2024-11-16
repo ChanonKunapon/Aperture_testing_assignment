@@ -12,7 +12,6 @@ namespace Ui_tests.tests
     public class Tests
     {
         [TestFixture]
-
         public class CheckoutTests
         {
             private IWebDriver _driver;
@@ -54,6 +53,8 @@ namespace Ui_tests.tests
             [TestCase("visual_user", "secret_sauce")]  // Add visual test case
             public void CompleteCheckout_ShouldCompleteOrderSuccessfully(string username, string password)
             {
+                Logger.Log($"START case CompleteCheckout_ShouldCompleteOrderSuccessfully via : username :{username} and password :{password}");
+
                 // Login with parameterized user credentials
                 _loginPage.Login(username, password);
 
@@ -102,6 +103,8 @@ namespace Ui_tests.tests
                     // If the user is locked out, verify that login fails
                     Assert.IsFalse(_productPage.veriify_product_page(), "Locked out user should not be able to access the product page.");
                 }
+
+                Logger.Log("END case CompleteCheckout_ShouldCompleteOrderSuccessfully");
             }
 
             //Negative login case
@@ -109,36 +112,45 @@ namespace Ui_tests.tests
             [Test]
             public void emptyLogin_ShouldShowErrorMessage()
             {
+                Logger.Log("START case emptyLogin_ShouldShowErrorMessage");
                 // Attempt to login with invalid credentials
                 _loginPage.Login("", "");
 
                 // Verify error message is displayed
                 string errorMessage = _loginPage.GetErrorMessage();
                 Assert.AreEqual("Epic sadface: Username is required", errorMessage);
+
+                Logger.Log("END case emptyLogin_ShouldShowErrorMessage");
             }
 
             [Category("negative login tests")]
             [Test]
             public void emptyUsername_ShouldShowErrorMessage()
             {
+                Logger.Log("START case emptyUsername_ShouldShowErrorMessage");
                 // Attempt to login with invalid credentials
                 _loginPage.Login("", "secret_sauce");
 
                 // Verify error message is displayed
                 string errorMessage = _loginPage.GetErrorMessage();
                 Assert.AreEqual("Epic sadface: Username is required", errorMessage);
+
+                Logger.Log("END case emptyUsername_ShouldShowErrorMessage");
             }
 
             [Category("negative login tests")]
             [Test]
             public void emptyPassword_ShouldShowErrorMessage()
             {
+                Logger.Log("START case emptyPassword_ShouldShowErrorMessage");
                 // Attempt to login with invalid credentials
                 _loginPage.Login("standard_user", "");
 
                 // Verify error message is displayed
                 string errorMessage = _loginPage.GetErrorMessage();
                 Assert.AreEqual("Epic sadface: Password is required", errorMessage);
+
+                Logger.Log("END case emptyPassword_ShouldShowErrorMessage");
             }
 
 
@@ -147,7 +159,7 @@ namespace Ui_tests.tests
             [Test]
             public void emptyCheckout_shouldShowErrorMessage()
             {
-
+                Logger.Log("START case emptyCheckout_shouldShowErrorMessage");
                 _loginPage.Login("standard_user", "secret_sauce");
 
                 // Verify correct login
@@ -186,6 +198,7 @@ namespace Ui_tests.tests
                 string confirmationText = _completePage.GetOrderConfirmationText();
                 Assert.AreNotEqual("Thank you for your order!", confirmationText);
 
+                Logger.Log("END case emptyCheckout_shouldShowErrorMessage");
 
             }
 
@@ -196,7 +209,7 @@ namespace Ui_tests.tests
             [TestCase("", "", "")]
             public void emptyInfomationCheckout_shouldShowErrorMessage(string fristname, string lastname, string zip_code)
             {
-
+                Logger.Log("START case emptyInfomationCheckout_shouldShowErrorMessage");
                 _loginPage.Login("standard_user", "secret_sauce");
 
                 // Verify correct login
@@ -243,7 +256,7 @@ namespace Ui_tests.tests
                     //Expected to get error message
                     Assert.AreEqual(_checkoutInformationPage.GetErrorMessage_checkOutInfo(), "Error: First Name is required");
                 }
-
+                Logger.Log("END case emptyInfomationCheckout_shouldShowErrorMessage");
             }
 
 
@@ -251,6 +264,7 @@ namespace Ui_tests.tests
             [Test]
             public void loggoutButton_shoudLoggoffToLoginPage()
             {
+                Logger.Log("START case loggoutButton_shoudLoggoffToLoginPage");
                 _loginPage.Login("standard_user", "secret_sauce");
 
                 // Verify correct login
@@ -264,7 +278,7 @@ namespace Ui_tests.tests
                 //verifyuser back to login page
                 IWebElement loginButton = _driver.FindElement(By.XPath("//*[@id='login-button']"));
                 Assert.IsTrue(loginButton.Displayed, "Login button should be displayed on the Login page.");
-
+                Logger.Log("END case loggoutButton_shoudLoggoffToLoginPage");
             }
 
 
