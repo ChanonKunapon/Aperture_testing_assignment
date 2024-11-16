@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Aperture_testing_assignment.Tests   
+namespace Aperture_testing_assignment.Tests
 {
     public class ProductApiTests
     {

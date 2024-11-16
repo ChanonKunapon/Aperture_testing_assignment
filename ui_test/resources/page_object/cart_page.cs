@@ -9,7 +9,7 @@ using Ui_tests.resources;
 namespace Ui_tests.resources.page_object
 {
     public class Cart_Page
-    {   
+    {
         private readonly IWebDriver _driver;
         private common _common;
 
@@ -21,6 +21,7 @@ namespace Ui_tests.resources.page_object
         {
             _driver = driver;
             _common = new common(driver);
+
         }
 
         public bool verify_cart_page()
@@ -31,6 +32,7 @@ namespace Ui_tests.resources.page_object
         public void ProceedToCheckout()
         {
             CheckoutButton.Click();
+            Logger.Log("Proceed To click Checkout button");
         }
     }
 

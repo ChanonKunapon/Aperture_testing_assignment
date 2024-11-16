@@ -31,6 +31,7 @@ namespace Ui_tests.resources.page_object
         public string GetOrderConfirmationText()
         {
             return OrderConfirmationText.Text;
+            Logger.Log("Get Order Confirmation Text : " + OrderConfirmationText.Text);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Ui_tests.resources.page_object
     internal class checkoutOverview_page
     {
         private readonly IWebDriver _driver;
-        private common  _common;
+        private common _common;
 
         private By checkout_overvirew_page_label = By.XPath("//*[@id=\"header_container\"]/div[2]/span");
         private IWebElement FinishButton => _driver.FindElement(By.Id("finish"));
@@ -31,6 +31,7 @@ namespace Ui_tests.resources.page_object
         public void FinishCheckout()
         {
             FinishButton.Click();
+            Logger.Log("click Finish Checkout by click 'Finish' button");
         }
     }
 }

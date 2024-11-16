@@ -30,6 +30,19 @@ namespace Ui_tests.resources
                 return false;
             }
         }
-    }    
-    
+
+        public string GetMessage(By locator)
+        {
+            try
+            {
+                IWebElement returnElement = _driver.FindElement(locator);
+                return returnElement.Text; // get Element text
+            }
+            catch (NoSuchElementException)
+            {
+                return string.Empty; // if no Error Message return empty
+            }
+        }
+    }
+
 }
