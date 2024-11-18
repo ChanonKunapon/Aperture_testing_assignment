@@ -97,7 +97,8 @@ Running the Tests
   3) Log location store in ..\ui_test\bin\Debug\net6.0\result_ui_test_log
 
 
-UI TEST ROBOT FRAMEWORK
+
+PART 2 (UI TEST) [ ROBOT FRAMEWORK ]
 
 This project is a suite of automated UI tests developed using the Robot Framework and SeleniumLibrary. The tests cover various scenarios, including user login, checkout flows, and logout functionalities, ensuring the quality and reliability of the application's UI.
 
