@@ -282,8 +282,6 @@ namespace Ui_tests.tests
             }
 
 
-
-
             [TearDown]
             public void TearDown()
             {

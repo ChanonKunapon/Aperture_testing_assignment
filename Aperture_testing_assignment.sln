@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ui_test", "ui_test\ui_test.csproj", "{7B4B4D1A-341A-4302-8022-9D59203933B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_tests", "Api_tests\Api_tests.csproj", "{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api_tests", "Api_tests\Api_tests.csproj", "{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ui_test_robot_framework", "ui_test_robot_framework\ui_test_robot_framework.pyproj", "{9C1735F3-0D28-4AD2-9D73-5A4BB16C3323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1735F3-0D28-4AD2-9D73-5A4BB16C3323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1735F3-0D28-4AD2-9D73-5A4BB16C3323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
