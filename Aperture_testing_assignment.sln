@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ui_test", "ui_test\ui_test.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api_tests", "Api_tests\Api_tests.csproj", "{AE3B6DDF-263D-4949-BB6F-1A1068CFAD52}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ui_test_robot_framework", "ui_test_robot_framework\ui_test_robot_framework.pyproj", "{9C1735F3-0D28-4AD2-9D73-5A4BB16C3323}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ui_test_robot_framework", "..\ui_test_robot_framework\ui_test_robot_framework.pyproj", "{9C1735F3-0D28-4AD2-9D73-5A4BB16C3323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

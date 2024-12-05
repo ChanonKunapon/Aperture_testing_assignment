@@ -337,7 +337,7 @@ namespace Aperture_testing_assignment.Tests
             LogToFile($"START case GetNonExistentProduct_ShouldReturnNotFound");
         }
 
-        // PUT https://fakestoreapi.com/products/{productId} - Bad Request tests
+        // PUT https://fakestoreapi.com/products/{productId} - Bad Request tests    //update produxt should be BAD request 
         [Theory]
         [InlineData(null, 12.99, "95%Cotton,5%Spandex, Features: Casual...", "women's clothing", "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg")] // title is null
         [InlineData("DANVOUY Womens T Shirt Casual Cotton Short", -1, "95%Cotton,5%Spandex, Features: Casual...", "women's clothing", "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg")] // negative price
@@ -345,7 +345,7 @@ namespace Aperture_testing_assignment.Tests
         [InlineData("DANVOUY Womens T Shirt Casual Cotton Short", 12.99, "95%Cotton,5%Spandex, Features: Casual...", "", "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg")] // empty category
         [InlineData("DANVOUY Womens T Shirt Casual Cotton Short", 12.99, "95%Cotton,5%Spandex, Features: Casual...", "women's clothing", "")] // empty image URL
         [InlineData("DANVOUY Womens T Shirt Casual Cotton Short", 12.99, "95%Cotton,5%Spandex, Features: Casual...", "invalid_category", "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg")] // invalid category
-        public async Task PutProduct_ShouldReturnBadRequest(string title, decimal price, string description, string category, string image)
+        public async Task Put_Incorrect_Product_ShouldReturnBadRequest(string title, decimal price, string description, string category, string image)
         {
             if (title == null) 
             { 

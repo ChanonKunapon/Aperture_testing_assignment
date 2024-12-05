@@ -43,6 +43,7 @@ namespace Ui_tests.tests
                 Assert.IsTrue(loginButton.Displayed, "Login button should be displayed on the Login page.");
             }
 
+
             // test for multiple users
             [Category("positive login tests")]
             [TestCase("standard_user", "secret_sauce")]
@@ -106,6 +107,7 @@ namespace Ui_tests.tests
 
                 Logger.Log("END case CompleteCheckout_ShouldCompleteOrderSuccessfully");
             }
+
 
             //Negative login case
             [Category("negative login tests")]

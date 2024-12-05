@@ -15,7 +15,7 @@ namespace Ui_tests.resources.page_object
 
         private IWebElement CheckoutButton => _driver.FindElement(By.Id("checkout"));
         private By cart_page_label = By.XPath("//*[@id=\"header_container\"]/div[2]/span");
-
+        
 
         public Cart_Page(IWebDriver driver)
         {
