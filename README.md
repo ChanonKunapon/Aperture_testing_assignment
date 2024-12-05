@@ -95,3 +95,62 @@ Running the Tests
   1) Run Tests Locally: Run all tests using the following command: dotnet test
   2) Run Tests Execution: dotnet test
   3) Log location store in ..\ui_test\bin\Debug\net6.0\result_ui_test_log
+
+
+
+PART 2 (UI TEST) [ ROBOT FRAMEWORK ]
+
+This project is a suite of automated UI tests developed using the Robot Framework and SeleniumLibrary. The tests cover various scenarios, including user login, checkout flows, and logout functionalities, ensuring the quality and reliability of the application's UI.
+
+Features
+Automated UI testing for login, product addition, and checkout processes.
+Supports multiple user roles for testing (valid, locked out, error-prone, etc.).
+Validates application behavior under various conditions.
+Generates detailed test reports and logs.
+
+Project Structure
+├── tests
+│   └── robot_ui_tests.robot          # Test cases
+├── resources
+   │   └── PO                            # Page object resources
+   │       ├── login_page.robot
+   │       ├── product_page.robot
+   │       ├── cart_page.robot
+   │       ├── checkout_information_page.robot
+   │       ├── checkout_overview_page.robot
+   │       ├── finished_order_page.robot
+   ├── common.robot          # Test setup Teardown
+   ├── robot_ui_tests_app.robot          # Keywords for test flows
+├── results                           # Test execution reports and logs
+
+Prerequisites
+  Before running the tests, ensure you have the following installed:
+
+1) Python (>=3.8)
+2) Robot Framework
+  -  Install with: pip install robotframework
+3) SeleniumLibrary
+  -  Install with: pip install robotframework-seleniumlibrary
+4) WebDriver for your browser
+  -  Example: ChromeDriver for Google Chrome.
+
+How to Run Tests
+  1) Run all tests : robot -d ./results tests/robot_ui_tests.robot
+  2) Run specific tagged tests: : robot -d ./results -i login_for_all_user tests/robot_ui_tests.robot
+
+View results
+ - Navigate to the results directory to see:
+    > log.html (Execution log)
+    >report.html (Test summary)
+
+Test Scenarios
+    1. Test Login for All Users
+     - Ensures all user roles (valid, locked out, problem, etc.) behave as expected during login.
+    2. Error User Checkout Test
+     - Validates that an "error user" cannot proceed to the finished order page.
+    3. Logout Test
+     - Confirms that clicking the logout button redirects users to the login page.
+    4. Empty Information Checkout Test
+     - Verifies that submitting incomplete checkout information displays appropriate error messages.
+    5. Add Products to Cart
+     - Confirms products are added to the cart correctly.
